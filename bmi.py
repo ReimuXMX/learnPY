@@ -12,3 +12,8 @@ elif options == 2:
     print('BMI={}'.format(bmi))
 else:
     print('ERROR: Wrong arg')
+
+if bmi >= 200:
+    print('SO FAT')
+else:
+    print('FAT')
