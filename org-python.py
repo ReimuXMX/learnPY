@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 
 import re
-import orgpython
-import doctest
-from time import time
+from orgpython import org_to_html
 
 class Regex(object):
-    newline = re.compile(r'^$')
-    heading = re.compile(r'^(?P<level>\*+)')
+    Bold = re.compile('^*<BLOG>*')
+    Fn = re.compile('[abcdefg]Alog')
+
+    def
