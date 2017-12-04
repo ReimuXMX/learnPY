@@ -6,7 +6,7 @@ import time
 
 def lucky_roll():
     num_player = int(input('Please enter a number between 1 - 10: '))
-    if num_player > 10:
+    if num_player < 1 or num_player > 10:
         print('ERROR')
         exit(1)
 
@@ -19,8 +19,6 @@ def lucky_roll():
         print('LUCKY!')
     elif num_player < num_ai:
         print('UNLUCKY...QAQ')
-    else:
-        pass
 
 
 def lucky_end():
