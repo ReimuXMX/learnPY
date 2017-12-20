@@ -4,39 +4,38 @@ import random
 import time
 
 
-def lucky_roll():
-    num_player = int(input('Please enter a number between 1 - 10: '))
-    if num_player < 1 or num_player > 10:
+def luckyRoll():
+    numPlayer = int(input('Enter a number between 1 - 10: '))
+    if numPlayer > 10 or numPlayer < 1:
         print('ERROR')
         exit(1)
 
-    print('AI Rolling...')
+    print('AI rolling...')
     time.sleep(2)
-    num_ai = random.randint(1, 10)
-    print('AI has rolled ' + str(num_ai))
+    numAI = random.randint(1, 10)
+    print('AI has rolled ' + str(numAI))
 
-    if num_player > num_ai:
-        print('LUCKY!')
-    elif num_player < num_ai:
-        print('UNLUCKY...QAQ')
-
-
-def lucky_end():
-    num_opt = input('Quit? (Y/N) ')
-
-    if num_opt == 'Y' or num_opt == 'y':
-        exit()
-    elif num_opt == 'N' or num_opt == 'n':
-        lucky_roll()
+    if numPlayer > numAI:
+        print('Lucky!!!')
+    elif numPlayer < numAI:
+        print('Unlucky...QAQ')
     else:
-        print('Please enter Y or N!')
+        print('Draw...Again!')
+        pass
+
+
+def luckyEnd():
+    opt = str(input('Quit? (Y/N) '))
+
+    if opt == 'Y' or opt == 'y':
+        exit()
+    elif opt == 'N' or opt == 'n':
+        luckyRoll()
+    else:
+        print('Please enter y or n!')
         return 0
 
 
-def lucky_main():
-    lucky_roll()
-    while True:
-        lucky_end()
-
-
-lucky_main()
+luckyRoll()
+while True:
+    luckyEnd()
